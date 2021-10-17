@@ -11,22 +11,22 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- *
- * @author PosYo
+ * Clase categoria
+ * @author Grupo 6
  */
-@Entity
-@Table(name = "categorias")
+@Entity // @Entity esto determina que lo va a utilizar springboot, se va a utilizar esta clase Java como una tabla de base de datos
+@Table(name = "categorias")  // @Table le da el nombre de la tabla en la base de datos que se creará
 public class Category {
     
-    @Id
+    @Id    // @Id marca este atributo como la llave principal de esta tabla
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer id;   
     private String name;
     private String description;
     
-    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "category") // **atributo de la clase a relacionar
-    @JsonIgnoreProperties("category")  // **para que no entre en un ciclo - nombre de la tabla mapped
-    private List<Computer> computers;  //  *objeto a relacionar. El nombre del atributo en postman lo da el getter y setter
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "category") // **atributo de la clase a relacionar (se crea en la otra clase)
+    @JsonIgnoreProperties("category")  // **para que no entre en un ciclo - nombre de la tabla mapped  (el nombre del objeto en la otra clase)
+    private List<Computer> computers;  //  *objeto a relacionar. El nombre del atributo en postman lo da el getter y setter 
 
     public Integer getId() {
         return id;
