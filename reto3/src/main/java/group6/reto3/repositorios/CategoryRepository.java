@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author Grupo 6
+ * @author PosYo
  */
 @Repository
 public class CategoryRepository {

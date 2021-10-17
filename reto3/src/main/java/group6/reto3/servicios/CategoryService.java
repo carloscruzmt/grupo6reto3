@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 /**
  *
- * @author Grupo 6
+ * @author PosYo
  */
 @Service
 public class CategoryService {
@@ -29,5 +29,4 @@ public class CategoryService {
         Optional<Category> category = categoryRepository.getById(id);
         return category.orElse(new Category());
     }
-    
 }

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author Grupo 6
+ * @author PosYo
  */
 @RestController
 @RequestMapping("/api/Category")

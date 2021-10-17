@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Grupo 6
+ * @author PosYo
  */
 @Entity
 @Table(name = "categorias")
@@ -20,44 +20,44 @@ public class Category {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer codigo;
-    private String nombre;
-    private String descripcion;
+    private Integer id;
+    private String name;
+    private String description;
     
-    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "categoria")
-    @JsonIgnoreProperties("categoria")
-    private List<Computer> computadores;
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "category") // **atributo de la clase a relacionar
+    @JsonIgnoreProperties("category")  // **para que no entre en un ciclo - nombre de la tabla mapped
+    private List<Computer> computers;  //  *objeto a relacionar. El nombre del atributo en postman lo da el getter y setter
 
-    public Integer getCodigo() {
-        return codigo;
+    public Integer getId() {
+        return id;
     }
 
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public List<Computer> getComputadores() {
-        return computadores;
+    public List<Computer> getComputers() {
+        return computers;
     }
 
-    public void setComputadores(List<Computer> computadores) {
-        this.computadores = computadores;
+    public void setComputers(List<Computer> computers) {
+        this.computers = computers;
     }
-    
+   
 }
