@@ -5,13 +5,14 @@ import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
+
 /**
  *
- * @author Grupo 6
+ * @author PosYo
  */
 public interface ComputerCrudRepository extends CrudRepository<Computer, Integer> {
     
     @Query(value = "select * from computadores where category_id = ? order by ASC", nativeQuery = true)
     public List<Computer> findByIdCategoryOrderByNombreAsc(int idCategory);
-    
+   
 }

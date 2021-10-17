@@ -1,11 +1,11 @@
 package group6.reto3.modelo;
 
 /**
- * Clase mensaje
+ * Clase reserva
  * @author Grupo 6
  */
-public class Message {
+public class Reservation {
     
-        
+    
     
 }
