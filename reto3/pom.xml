@@ -11,7 +11,7 @@
 	<groupId>group6</groupId>
 	<artifactId>reto3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>reto3</name>
+	<name>Reto3</name>
 	<description>Ciclo 3 Java v8</description>
 	<properties>
 		<java.version>1.8</java.version>
